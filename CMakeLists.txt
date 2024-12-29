@@ -14,7 +14,9 @@ find_package(raylib REQUIRED)
 include_directories(${RAYLIB_INCLUDE_DIRS})
 
 # Add the executable
-add_executable(LANC_ToneGenerator main.cpp)
+add_executable(LANC_ToneGenerator main.cpp
+    wavegenerator.h wavegenerator.cpp
+    command.h command.cpp)
 
 # Link Raylib library explicitly
 target_link_libraries(LANC_ToneGenerator PRIVATE ${RAYLIB_LIBRARIES} raylib)

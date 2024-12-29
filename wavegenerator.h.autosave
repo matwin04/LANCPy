@@ -1,0 +1,12 @@
+#ifndef WAVEGENERATOR_H
+#define WAVEGENERATOR_H
+#include "raylib.h"
+#include <vector>
+class waveGenerator
+{
+public:
+    Wave generateBit(bool int, float bitDuration,int sampleRate = 44100);
+    Wave generateCommand(const std::vector<uint8_t>& commandBytes,int bau)
+};
+
+#endif // WAVEGENERATOR_H
